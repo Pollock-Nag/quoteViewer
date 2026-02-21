@@ -1,0 +1,14 @@
+<div class="quote-card" [routerLink]="['/quotes', quote.id]" (click)="onSelect()">
+  <p>Card No: {{ index + 1 }}</p>
+  <p class="quote-text">{{ quote.text.length > 50 ? quote.text.substring(0, 50) + '...' : quote.text }}</p>
+  <p class="quote-author">- {{ quote.author | uppercase }}</p>
+  @if (isEven) {
+    <p>This is even</p>
+  }
+  @else if (index % 3 === 0){
+    <p>This is multiple of 3</p>
+  }
+  @else {
+    <p>This is odd</p>
+  }
+</div>

@@ -1,0 +1,16 @@
+<div class="quote-details-container">
+  @if (quote) {
+    <div class="quote-card">
+      <p class="quote-text">"{{ quote.text }}"</p>
+      <p class="quote-author">- {{ quote.author }}</p>
+      <p class="quote-id">Quote ID: {{ quote.id }}</p>
+      
+      <button class="back-btn" routerLink="/quotes">Back to Quotes</button>
+    </div>
+  } @else {
+    <div class="not-found">
+      <p>Quote not found.</p>
+      <button class="back-btn" routerLink="/quotes">Back to Quotes</button>
+    </div>
+  }
+</div>
