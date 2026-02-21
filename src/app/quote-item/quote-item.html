@@ -1,5 +1,8 @@
-<div class="quote-card" [routerLink]="['/quotes', quote.id]" (click)="onSelect()">
-  <p>Card No: {{ index + 1 }}</p>
+<div class="quote-card" [routerLink]="['/quotes', quote.id]" (click)="onSelect(quote)">
+  <div class="card-header">
+    <span class="card-title">Quote viewer cards.</span>
+    <span class="card-number">Card No: {{ index + 1 }}</span>
+  </div>
   <p class="quote-text">{{ quote.text.length > 50 ? quote.text.substring(0, 50) + '...' : quote.text }}</p>
-  <p class="quote-author">- {{ quote.author | uppercase }}</p>
+  <p class="quote-author">Author: {{ quote.author }}</p>
 </div>

@@ -1,28 +1,57 @@
 .quote-card {
   margin-bottom: 24px;
-  padding: 1.5rem;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 2rem;
+  border-radius: 6px; /* slightly smaller radius for a paper look */
+  background-color: #eee1c4; /* Similar to background but slightly different contrast */
+  box-shadow: 8px 12px 25px rgba(0, 0, 0, 0.08), 2px 4px 6px rgba(0, 0, 0, 0.05); /* Long elegant shadow */
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 12px 18px 30px rgba(0, 0, 0, 0.12), 3px 6px 10px rgba(0, 0, 0, 0.08); /* More intense hover shadow */
   }
 }
 
-.quote-text {
-  font-size: 1.1rem;
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #2c2a25;
+}
+
+.card-number {
+  font-family: 'Lora', serif;
+  font-size: 0.9rem;
   font-style: italic;
-  margin-bottom: 1rem;
-  color: #555;
-  line-height: 1.5;
+  color: #6d665a;
+}
+
+.quote-text {
+  font-family: 'Lora', serif;
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #1a1916;
+  line-height: 1.8;
+  flex-grow: 1; /* Pushes author to the bottom */
 }
 
 .quote-author {
-  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1rem;
   text-align: right;
-  color: #333;
+  color: #4a453c;
+  align-self: flex-end;
 }

@@ -15,7 +15,7 @@ export class QuoteItem {
 
   @Output() quoteSelected = new EventEmitter<Quote>();
 
-  onSelect() {
-    this.quoteSelected.emit(this.quote);
+  onSelect(quote: Quote) {
+    this.quoteSelected.emit(quote);
   }
 }

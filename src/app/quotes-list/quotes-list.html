@@ -1,6 +1,6 @@
 <div class="quotes-container">
   <h1>Available Quotes</h1>
-  <div>
+  <div class="quotes-grid">
     @for (quote of quotes; track quote.id; let i = $index) {
       <app-quote-item 
         [quote]="quote" 
