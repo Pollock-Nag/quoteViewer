@@ -12,7 +12,6 @@ import { RouterLink } from '@angular/router';
 export class QuoteItem {
   @Input({ required: true }) quote!: Quote;
   @Input() index!: number;
-  @Input() isEven!: boolean;
 
   @Output() quoteSelected = new EventEmitter<Quote>();
 

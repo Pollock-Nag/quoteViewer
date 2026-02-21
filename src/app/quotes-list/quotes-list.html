@@ -1,11 +1,10 @@
 <div class="quotes-container">
   <h1>Available Quotes</h1>
   <div>
-    @for (quote of quotes; track quote.id; let i = $index, e = $even) {
+    @for (quote of quotes; track quote.id; let i = $index) {
       <app-quote-item 
         [quote]="quote" 
         [index]="i" 
-        [isEven]="e"
         (quoteSelected)="onQuoteSelected($event)">
       </app-quote-item>
     } @empty {
